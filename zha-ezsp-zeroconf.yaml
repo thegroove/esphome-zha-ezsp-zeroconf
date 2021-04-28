@@ -36,8 +36,7 @@ zeroconf:
     protocol: tcp
     port: 8080
     txt:
-      - key: baud_rate
-        value: 115200
+      baud_rate: 115200
 
 # optional binary sensor to monitor serial connection:
 binary_sensor:
