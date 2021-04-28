@@ -1,7 +1,7 @@
 esphome:
   name: zha_ezsp_mdns
   platform: ESP8266
-  board: esp_wroom_02 # 2MB
+  board: esp_wroom_02
 
 wifi:
   ssid: YOUR_SSID
@@ -30,6 +30,14 @@ uart:
 serial_server:
   port: 8888 # optional, default is 8888
   multi_client: false # optional, default is false. Set to true to allow multiple simultaneous connections
+
+zeroconf:
+  - service: ezsp
+    protocol: tcp
+    port: 8080
+    txt:
+      - key: baud_rate
+        value: 115200
 
 # optional binary sensor to monitor serial connection:
 binary_sensor:
