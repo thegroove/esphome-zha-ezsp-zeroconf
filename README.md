@@ -4,10 +4,10 @@ Experimental! ESPHome component with tcp-to-serial and zeroconf feature for auto
 
 Advertises in this format:
 ```
-zha_ezsp_zeroconf  _ezsp._tcp  local
-   hostname = [zha_ezsp_zeroconf.local]
+_esphome_zb_gw_efr32._tcp      local
+   hostname = [esphome_zb_gw_efr32.local]
    address = [172.16.0.174]
    port = [8080]
-   txt = ["baud_rate=115200"]
+   txt = ["version=1.0" "location=basement" "radio_type=ezsp" "baud_rate=115200" "data_flow_control=software"]
 ```
 (use e.g. avahi-browse -r -a to see this)
