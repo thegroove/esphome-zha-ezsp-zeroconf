@@ -32,11 +32,15 @@ serial_server:
   multi_client: false # optional, default is false. Set to true to allow multiple simultaneous connections
 
 zeroconf:
-  - service: ezsp
+  - service: esphome_zb_gw_efr32
     protocol: tcp
     port: 8080
     txt:
+      version: 1.0
+      location: basement
+      radio_type: ezsp
       baud_rate: 115200
+      data_flow_control: software
 
 # optional binary sensor to monitor serial connection:
 binary_sensor:
